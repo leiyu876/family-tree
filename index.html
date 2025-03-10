@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://shrihari-lib.netlify.app/lineage.min.js"></script>
+</head>
+<body>
+    <div id="divFamily"></div>
+    <script>
+        var jsonData = [
+            {
+                "id": 1, 
+                "pid": 2, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Leonardo", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 2, 
+                "pid": 1, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Liza", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 3, 
+                "pid": 4, 
+                "mid": 2, 
+                "fid": 1, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Leonaliz", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 4, 
+                "pid": 3, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Renmar", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 5, 
+                "mid": 3, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Raphael", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 6, 
+                "mid": 2, 
+                "fid": 1, 
+                "pid": 7, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Leo", 
+                "photo": "https://scontent.fbne10-2.fna.fbcdn.net/v/t1.6435-9/34850338_1921330917890829_2173067887713976320_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=aPSMJ91pvzsQ7kNvgHWe4q6&_nc_oc=AdjA8rrsdir9aL7wtnlPSvvDO1hEoOIurGljfGofsdRKSwzjquU51UzIVyXyBwxMgVU&_nc_zt=23&_nc_ht=scontent.fbne10-2.fna&_nc_gid=ANNhuRhCt40EnadxAqrGzkD&oh=00_AYEa2nJdFGAJdiINi7K-2psUnfwx1hbd05F5G-vW33fLQw&oe=67F4FB02", 
+                "addr": "", 
+            },
+            {
+                "id": 7, 
+                "pid": 6, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Mona", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 8, 
+                "mid": 2, 
+                "fid": 1, 
+                "pid": 9, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Tommy", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 9, 
+                "pid": 8, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Rhea", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 10, 
+                "fid": 6, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Grant", 
+                "photo": "https://scontent.fbne10-1.fna.fbcdn.net/v/t39.30808-6/324741904_520489096761676_6384568374406359473_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=pUnihD5izCsQ7kNvgE_pzsa&_nc_oc=AdjmmG4TeYxAHj2dwbg2eWlJnQw-Ky6Xz5U_XqkV1HaEjSD2Wye5_OyIj7AoAnw_rpA&_nc_zt=23&_nc_ht=scontent.fbne10-1.fna&_nc_gid=AtPCVb-1g-xcJZRTzvFw9Yi&oh=00_AYHdYYCNHp3b_y-ujDEmjwTBfa-mo8oRcwkiNQvj2TsI_w&oe=67D359C5", 
+                "addr": "", 
+            },
+            {
+                "id": 11, 
+                "mid": 2, 
+                "fid": 1, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Marichu", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 12, 
+                "mid": 2, 
+                "fid": 1, 
+                "gender": "male", 
+                "title": "", 
+                "name": "Marbert", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 13, 
+                "fid": 8, 
+                "gender": "female", 
+                "title": "", 
+                "name": "Feliz", 
+                "photo": "", 
+                "addr": "", 
+            },
+            {
+                "id": 14, 
+                "fid": 8, // tommy
+                "gender": "female", 
+                "title": "", 
+                "name": "Ary", 
+                "photo": "", 
+                "addr": "", 
+            }
+        ];
+        var params = {
+            data: jsonData, /*Local variable or file path*/
+            search: true, //false
+            container: "divFamily",
+            template: "circle" // "rounded" // "raised" // "tilted"
+        };
+        var tree = new Lineage(params);
+        tree.load();
+    </script>
+</body>
+</html>
